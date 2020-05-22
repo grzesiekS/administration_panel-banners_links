@@ -2,6 +2,12 @@
   box-sizing: border-box;
 }
 
+.container {
+  max-width: 1060px;
+  margin: 0px auto 0px $side-bar-width;
+  padding: 15px;
+}
+
 .top-bar {
   position: fixed;
   top: 0;
@@ -19,5 +25,14 @@
   background-color: $background-color-sidebar;
   width: $side-bar-width;
   height: 100vh;
+}
+
+.sections {
+  section {
+    &:first-child {
+      margin-top: 78px;
+    }
+  }
+  margin: 11px 18px;
 }
 

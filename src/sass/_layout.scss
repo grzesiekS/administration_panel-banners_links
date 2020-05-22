@@ -14,15 +14,12 @@
   left: $side-bar-width;
   height: $top-bar-height;
   width: 100vh;
-  background-color: #ffffff;
-
 }
 
 .side-bar {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: $background-color-sidebar;
   width: $side-bar-width;
   height: 100vh;
 }

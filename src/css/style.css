@@ -358,4 +358,27 @@ h2 {
   font-size: 16px;
   font-weight: 700;
 }
+
+a {
+  color: #56819f;
+  text-decoration: none;
+}
+
+a.link--large {
+  font-size: 16px;
+}
+
+a.link--small {
+  font-size: 13px;
+}
+
+a:hover {
+  color: #ffa200;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 /*# sourceMappingURL=style.css.map */

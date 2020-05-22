@@ -1,6 +1,7 @@
 /* Colors */
 /* Font sizes */
 /* Fonts */
+/* Dimensions */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -338,6 +339,27 @@ template {
  */
 [hidden] {
   display: none;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 188px;
+  height: 60px;
+  width: 100vh;
+}
+
+.side-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #333333;
+  width: 188px;
+  height: 100vh;
 }
 
 * {

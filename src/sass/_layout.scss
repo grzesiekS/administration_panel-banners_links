@@ -1,0 +1,21 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: $side-bar-width;
+  height: $top-bar-height;
+  width: 100vh;
+}
+
+.side-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $background-color-sidebar;
+  width: $side-bar-width;
+  height: 100vh;
+}
+

@@ -486,6 +486,7 @@ ul, ol {
   padding: 12px 24px;
   display: inline-block;
   text-align: center;
+  border-radius: 3px;
 }
 
 .color-tab.active {

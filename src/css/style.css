@@ -2,6 +2,8 @@
 /* Font sizes */
 /* Fonts */
 /* Dimensions */
+/* Decorations */
+/* Button mixin */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -448,6 +450,34 @@ ul, ol {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+/* Buttons */
+.btn {
+  background: #f58220;
+  color: #FFFFFF;
+  border-color: #f58220;
+  border-radius: 3px;
+  display: inline-block;
+  border-width: 1px;
+  border-style: solid;
+  padding: 12px 24px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn:hover {
+  background: #f68a2f;
+  color: #FFFFFF;
+}
+
+.btn.btn--gray {
+  background: #979797;
+  border-color: #979797;
+}
+
+.btn.btn--gray:hover {
+  background: #9f9f9f;
 }
 
 body {

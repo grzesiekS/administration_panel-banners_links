@@ -1,0 +1,13 @@
+/* Buttons */
+.btn {
+  @include btn($main-color, $color-light, $main-color);
+
+  &.btn--gray {
+    background: $font-color;
+    border-color: $font-color;
+
+    &:hover {
+      background: lighten($font-color, 3%);
+    }
+  }
+}

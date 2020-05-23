@@ -1,0 +1,18 @@
+/* Button mixin */
+@mixin btn($btn-bg, $btn-text, $btn-border) {
+  background: $btn-bg;
+  color: $btn-text;
+  border-color: $btn-border;
+  border-radius: $border-redius;
+  display: inline-block;
+  border-width: 1px;
+  border-style: solid;
+  padding: 12px 24px;
+  text-decoration: none;
+  text-align: center;
+
+  &:hover {
+    background: lighten($btn-bg, 3%);
+    color: $btn-text;
+  }
+}

@@ -4,7 +4,7 @@
 
 .container {
   max-width: 1060px;
-  margin: 0px auto 0px $side-bar-width;
+  margin: 0px auto;
   padding: 15px;
 }
 
@@ -13,7 +13,7 @@
   top: 0;
   left: $side-bar-width;
   height: $top-bar-height;
-  width: 100vh;
+  width: 100%;
 }
 
 .side-bar {
@@ -26,10 +26,17 @@
 
 .sections {
   section {
+    margin: 11px 18px;
+
     &:first-child {
       margin-top: 78px;
     }
   }
-  margin: 11px 18px;
+}
+
+@media (max-width: 1460px) {
+  .container {
+    margin-left: $side-bar-width;
+  }
 }
 

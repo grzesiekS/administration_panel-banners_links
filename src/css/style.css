@@ -347,7 +347,7 @@ template {
 
 .container {
   max-width: 1060px;
-  margin: 0px auto 0px 188px;
+  margin: 0px auto;
   padding: 15px;
 }
 
@@ -356,7 +356,7 @@ template {
   top: 0;
   left: 188px;
   height: 60px;
-  width: 100vh;
+  width: 100%;
 }
 
 .side-bar {
@@ -367,12 +367,18 @@ template {
   height: 100vh;
 }
 
-.sections {
+.sections section {
   margin: 11px 18px;
 }
 
 .sections section:first-child {
   margin-top: 78px;
+}
+
+@media (max-width: 1460px) {
+  .container {
+    margin-left: 188px;
+  }
 }
 
 * {
@@ -426,6 +432,10 @@ body {
 }
 
 .top-bar {
+  background-color: #FFFFFF;
+}
+
+section .container {
   background-color: #FFFFFF;
 }
 /*# sourceMappingURL=style.css.map */

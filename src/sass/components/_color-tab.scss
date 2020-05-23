@@ -1,0 +1,18 @@
+/* Color tabs */
+.color-tab {
+  @include color-tab();
+
+  .color-tab__circle--orange {
+    background-color: $main-color;
+  }
+
+  .color-tab__circle--blue {
+    background-color: $color-blue;
+  }
+
+  .color-tab__circle--green {
+    background-color: $color-green;
+  }
+}
+
+

@@ -16,3 +16,39 @@
     color: $btn-text;
   }
 }
+
+/* color tabs */
+@mixin color-tab() {
+  padding: 12px 24px;
+  display: inline-block;
+  text-align: center;
+
+  &.active {
+    background-color: $color-light-gray;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: $color-light-gray;
+  }
+
+  input {
+    display: none;
+  }
+
+  label {
+    font-size: 16px;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+
+  .color-tab__circle {
+    display: inline-block;
+    background-color: black;
+    width: 16px;
+    height: 16px;
+    margin-right: 12px;
+    border-radius: 50%;
+  }
+}

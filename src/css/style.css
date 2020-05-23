@@ -4,6 +4,7 @@
 /* Dimensions */
 /* Decorations */
 /* Button mixin */
+/* color tabs */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -478,6 +479,55 @@ ul, ol {
 
 .btn.btn--gray:hover {
   background: #9f9f9f;
+}
+
+/* Color tabs */
+.color-tab {
+  padding: 12px 24px;
+  display: inline-block;
+  text-align: center;
+}
+
+.color-tab.active {
+  background-color: #F5F5F2;
+}
+
+.color-tab:hover {
+  cursor: pointer;
+  background-color: #F5F5F2;
+}
+
+.color-tab input {
+  display: none;
+}
+
+.color-tab label {
+  font-size: 16px;
+}
+
+.color-tab label:hover {
+  cursor: pointer;
+}
+
+.color-tab .color-tab__circle {
+  display: inline-block;
+  background-color: black;
+  width: 16px;
+  height: 16px;
+  margin-right: 12px;
+  border-radius: 50%;
+}
+
+.color-tab .color-tab__circle--orange {
+  background-color: #f58220;
+}
+
+.color-tab .color-tab__circle--blue {
+  background-color: #56819f;
+}
+
+.color-tab .color-tab__circle--green {
+  background-color: #04AE00;
 }
 
 body {

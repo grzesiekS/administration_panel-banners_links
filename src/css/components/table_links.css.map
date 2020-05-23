@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "table_links.css",
+	"sources": [
+		"../../sass/components/table_links.scss"
+	],
+	"names": [],
+	"mappings": ""
+}

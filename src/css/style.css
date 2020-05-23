@@ -361,25 +361,21 @@ template {
 .container--flex .col--12 {
   -ms-flex: 100%;
       flex: 100%;
-  border: 1px solid black;
 }
 
 .container--flex .col--6 {
   -ms-flex: 50%;
       flex: 50%;
-  border: 1px solid black;
 }
 
 .container--flex .col--4 {
   -ms-flex: 33.333333%;
       flex: 33.333333%;
-  border: 1px solid black;
 }
 
 .container--flex .col--3 {
   -ms-flex: 25%;
       flex: 25%;
-  border: 1px solid black;
 }
 
 .top-bar {

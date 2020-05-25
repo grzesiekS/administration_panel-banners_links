@@ -39,3 +39,12 @@ ul, ol {
   padding: 0;
   list-style: none;
 }
+
+i {
+
+  font-size: 18px;
+
+  &.icon--small {
+    font-size: 11px;
+  }
+}

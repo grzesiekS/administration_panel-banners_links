@@ -27,6 +27,10 @@
   .col--3 {
     flex: 25%;
   }
+
+  .col--auto {
+    flex: 0 0 auto;
+  }
 }
 
 .top-bar {
@@ -34,7 +38,7 @@
   top: 0;
   left: $side-bar-width;
   height: $top-bar-height;
-  width: 100%;
+  width: calc(100vw - 188px);
 }
 
 .side-bar {

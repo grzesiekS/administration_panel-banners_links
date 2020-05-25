@@ -1,6 +1,5 @@
 /* Top Bar section */
 .top-bar__content {
-
   .container--flex {
     justify-content: flex-end;
   }
@@ -35,7 +34,7 @@
 
     &:nth-child(3) {
       a, i {
-       margin-top: 20px;
+        margin-top: 20px;
       }
 
       a {
@@ -68,6 +67,14 @@
   a:hover {
     i {
       color: $main-color;
+    }
+  }
+}
+
+@media(max-width: 668px) {
+  .top-bar {
+    .top-bar__content {
+      display: none;
     }
   }
 }

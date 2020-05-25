@@ -3,6 +3,7 @@
   height: $top-bar-height;
   transition: all 1s ease-in-out;
   overflow: hidden;
+  position: relative;
 
   .logo {
     position: relative;
@@ -26,6 +27,24 @@
 
   &.active {
     height: 100vh;
+  }
+
+  .top-bar__content {
+    border-top: 1px solid $font-color;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: none;
+
+    .container--flex {
+      flex-direction: column;
+    }
+
+    .col--auto {
+      width: 100%;
+      border: 0;
+    }
   }
 }
 
@@ -107,6 +126,14 @@
   .messenger-contact.active {
     i {
       opacity: 1;
+    }
+  }
+}
+
+@media(max-width: 668px) {
+  .side-bar {
+    .top-bar__content {
+      display: block;
     }
   }
 }

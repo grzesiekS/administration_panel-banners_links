@@ -620,4 +620,36 @@ section .container {
 .side-bar.active {
   height: 100vh;
 }
+
+.side-bar__menu li a {
+  display: block;
+  padding: 10px;
+  margin: 5px 0;
+  color: #979797;
+}
+
+.side-bar__menu li a.active {
+  color: #FFFFFF;
+  background-color: #282828;
+  border-left: 2px solid #f58220;
+}
+
+.side-bar__menu li a.active i {
+  color: #FFFFFF;
+}
+
+.side-bar__menu li i {
+  margin-right: 15px;
+  font-size: 18px;
+}
+
+.side-bar__menu li a:hover {
+  color: #FFFFFF;
+  background-color: #282828;
+  border-left: 2px solid #f58220;
+}
+
+.side-bar__menu li a:hover i {
+  color: #FFFFFF;
+}
 /*# sourceMappingURL=style.css.map */

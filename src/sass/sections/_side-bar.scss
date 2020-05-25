@@ -1,0 +1,29 @@
+/* Side bar section */
+.side-bar {
+  height: $top-bar-height;
+  transition: all 1s ease-in-out;
+
+  .logo {
+    position: relative;
+
+    img {
+      margin: 20px;
+    }
+
+    i {
+      position: absolute;
+      font-size: 20px;
+      top: 50%;
+      right: 18px;
+      transform: translateY(-50%);
+
+      &:hover {
+        color: $main-color;
+      }
+    }
+  }
+
+  &.active {
+    height: 100vh;
+  }
+}

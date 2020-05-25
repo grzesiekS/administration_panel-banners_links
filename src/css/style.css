@@ -590,4 +590,34 @@ section .container {
   max-width: 700px;
   margin: 0 auto;
 }
+
+/* Side bar section */
+.side-bar {
+  height: 60px;
+  transition: all 1s ease-in-out;
+}
+
+.side-bar .logo {
+  position: relative;
+}
+
+.side-bar .logo img {
+  margin: 20px;
+}
+
+.side-bar .logo i {
+  position: absolute;
+  font-size: 20px;
+  top: 50%;
+  right: 18px;
+  transform: translateY(-50%);
+}
+
+.side-bar .logo i:hover {
+  color: #f58220;
+}
+
+.side-bar.active {
+  height: 100vh;
+}
 /*# sourceMappingURL=style.css.map */

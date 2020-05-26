@@ -28,24 +28,6 @@
   &.active {
     height: 100vh;
   }
-
-  .top-bar__content {
-    border-top: 1px solid $font-color;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    display: none;
-
-    .container--flex {
-      flex-direction: column;
-    }
-
-    .col--auto {
-      width: 100%;
-      border: 0;
-    }
-  }
 }
 
 .side-bar__menu {

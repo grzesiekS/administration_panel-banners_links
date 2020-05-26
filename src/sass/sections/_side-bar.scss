@@ -2,7 +2,7 @@
 .side-bar {
   height: $top-bar-height;
   transition: all 1s ease-in-out;
-  overflow: hidden;
+
   position: relative;
 
   .logo {
@@ -34,7 +34,6 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    display: none;
 
     .container--flex {
       flex-direction: column;
@@ -75,6 +74,7 @@
   margin-top: 41px;
   border-top: 1px solid $font-color;
   padding-left: 20px;
+  overflow: hidden;
 
   .messenger-contact {
     margin-bottom: 40px;

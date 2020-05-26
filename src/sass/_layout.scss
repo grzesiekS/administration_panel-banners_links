@@ -53,6 +53,8 @@ body, html {
   left: 0;
   width: $side-bar-width;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .sections {

@@ -1,4 +1,4 @@
-import { select } from '../settings.js';
+import { select, classNames } from '../settings.js';
 
 class SideBar {
   constructor(element) {
@@ -13,7 +13,15 @@ class SideBar {
 
     thisSideBar.dom.logo.link.addEventListener('click', function(){
       event.preventDefault();
+      thisSideBar.showHideSideBarSection();
     });
+  }
+
+  showHideSideBarSection() {
+    const thisSideBar = this;
+
+    /*[DONE] toggle class active */
+    thisSideBar.dom.wrapper.classList.toggle(classNames.sideBarSection.active);
   }
 
   getElemenst(element) {
@@ -24,7 +32,6 @@ class SideBar {
 
     thisSideBar.dom.logo = thisSideBar.dom.wrapper.querySelector(select.sideBarSection.logo);
     thisSideBar.dom.logo.link = thisSideBar.dom.logo.querySelector('a');
-    console.log(thisSideBar.dom.logo.link);
   }
 }
 

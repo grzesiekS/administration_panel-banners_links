@@ -11,4 +11,10 @@ const select = {
   },
 };
 
-export {select};
+const classNames = {
+  sideBarSection: {
+    active: 'active',
+  },
+};
+
+export {select, classNames};

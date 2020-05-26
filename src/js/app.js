@@ -1,7 +1,13 @@
+import { select } from './settings.js';
+import { SideBar } from './components/SideBar.js';
 
 const app = {
   initSideBar: function(){
-    console.log('test');
+    const thisApp = this;
+
+    thisApp.sideBarWrapper = document.querySelector(select.containerOf.sideBar);
+
+    new SideBar(thisApp.sideBarWrapper);
   },
 
   init: function() {

@@ -1,8 +1,8 @@
 /* Side bar section */
 .side-bar {
   height: $top-bar-height;
-  transition: all 1s ease-in-out;
-  overflow-y: auto;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
 
   .logo {
     position: relative;
@@ -26,6 +26,7 @@
 
   &.active {
     height: 100vh;
+    overflow-y: auto;
   }
 
   .side-bar__menu--bottom {

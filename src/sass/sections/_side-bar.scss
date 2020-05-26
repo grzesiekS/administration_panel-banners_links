@@ -28,6 +28,47 @@
   &.active {
     height: 100vh;
   }
+
+  .side-bar__menu--bottom {
+    border-top: 1px solid $font-color;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: none;
+
+    .container--flex {
+      flex-direction: column;
+    }
+
+    .col--auto {
+      width: 100%;
+      text-align: left;
+      border: 0;
+    }
+
+    .notification__indicate {
+      left: 10%;
+    }
+
+    a {
+      padding-left: 10px;
+    }
+
+    a:hover {
+      color: $color-light;
+      background-color: #282828;
+      border-left: 2px solid $main-color;
+
+    }
+
+    a:hover i {
+      color: $color-light;
+    }
+
+    a:hover .notification__indicate {
+      left: 11%;
+    }
+  }
 }
 
 .side-bar__messenger {
@@ -78,7 +119,7 @@
 
 @media(max-width: 668px) {
   .side-bar {
-    .top-bar__content {
+    .side-bar__menu--bottom {
       display: block;
     }
   }

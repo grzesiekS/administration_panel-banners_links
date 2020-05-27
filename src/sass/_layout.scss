@@ -57,7 +57,7 @@ body, html {
   }
 }
 
-@media (max-width: 1460px) {
+@media (min-width: 668px) {
   .container {
     margin-left: $side-bar-width;
   }

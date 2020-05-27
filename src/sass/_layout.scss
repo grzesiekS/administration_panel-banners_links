@@ -14,7 +14,7 @@ body, html {
   padding: 15px;
 }
 
-.container-fluid {
+.container--fluid {
   width: 100%;
   padding-left: 15px;
   padding-right: 15px;
@@ -23,22 +23,6 @@ body, html {
 .container--flex {
   display: flex;
   flex-wrap: wrap;
-
-  .col--12 {
-    flex: 100%;
-  }
-
-  .col--6 {
-    flex: 50%;
-  }
-
-  .col--4 {
-    flex: 33.333333%;
-  }
-
-  .col--3 {
-    flex: 25%;
-  }
 
   .col--auto {
     flex: 0 0 auto;
@@ -77,5 +61,21 @@ body, html {
   .container {
     margin-left: $side-bar-width;
   }
+}
+
+@media(max-width: 767px) {
+  @include grid('sm');
+}
+
+@media(min-width: 768px) {
+  @include grid('md');
+}
+
+@media(min-width: 992px) {
+  @include grid('lg');
+}
+
+@media(min-width: 1200px) {
+  @include grid('xl');
 }
 

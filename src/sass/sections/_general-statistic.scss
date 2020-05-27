@@ -42,3 +42,30 @@
     }
   }
 }
+
+.general-statistic__summary {
+  margin: 41px 15% 0 15%;
+  text-align: center;
+
+  .summary {
+    border-bottom: 2px solid $color-dark-gray;
+    margin-bottom: 22px;
+    display: flex;
+    justify-content: space-between;
+
+    p, h2 {
+      flex: 0 0 auto;
+      display: inline-block;
+      font-size: $header-font-size;
+    }
+
+    &.margin--right {
+      margin-right: 32px;
+    }
+
+    &.margin--left {
+      margin-left: 32px;
+    }
+  }
+
+}

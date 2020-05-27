@@ -1,1 +1,44 @@
+/* General Statistic */
+.general-statistic__date {
+  border-top: 2px solid $color-dark-gray;
+  border-bottom: 2px solid $color-dark-gray;
+  text-align: center;
+}
 
+.date__input {
+  display: inline-block;
+  border: 1px solid $color-dark-gray;
+  border-radius: $border-redius;
+  position: relative;
+  margin: 35px 13px 35px 0;
+
+  input {
+    height: 40px;
+    border: none;
+    padding: 0 17px;
+    position: relative;
+
+    &:first-child::after {
+      content: '';
+      width: 1px;
+      height: 30px;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: $color-dark-gray;
+    }
+
+    &::-webkit-calendar-picker-indicator {
+      display: none;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus::-webkit-calendar-picker-indicator {
+      display: block;
+    }
+  }
+}

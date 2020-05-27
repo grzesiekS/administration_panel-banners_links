@@ -7,13 +7,9 @@
   display: inline-block;
   border-width: 1px;
   border-style: solid;
-  padding: 12px 12px;
+  padding: 12px 24px;
   text-decoration: none;
   text-align: center;
-
-  i {
-    color: $btn-text;
-  }
 
   &:hover {
     background: lighten($btn-bg, 3%);

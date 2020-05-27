@@ -10,4 +10,13 @@
       background: lighten($font-color, 3%);
     }
   }
+
+  &.btn--icon {
+    padding: 8px 12px;
+
+    i {
+      color: $color-light;
+      font-size: 14px;
+    }
+  }
 }

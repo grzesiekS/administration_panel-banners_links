@@ -66,3 +66,24 @@
   }
 
 }
+
+.general-statistic__earnings-chart {
+  h2 {
+    text-align: left;
+    margin-bottom: 40px;
+  }
+
+  .tab-buttons {
+    justify-content: space-around;
+  }
+
+  .graph {
+    margin: 40px 0;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

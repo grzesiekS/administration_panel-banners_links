@@ -17,4 +17,8 @@ const classNames = {
   },
 };
 
-export {select, classNames};
+const options = {
+  widthMobile: 1024,
+};
+
+export {select, classNames, options};

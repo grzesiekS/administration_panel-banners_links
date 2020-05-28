@@ -57,9 +57,15 @@ body, html {
   }
 }
 
-@media (min-width: 668px) {
+@media (max-width: 1450px) {
   .container {
     margin-left: $side-bar-width;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    margin: 0 auto;
   }
 }
 

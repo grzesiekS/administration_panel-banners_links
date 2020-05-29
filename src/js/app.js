@@ -1,6 +1,6 @@
 import { select } from './settings.js';
 import { SideBar } from './components/SideBar.js';
-import { GeneralStatisitc } from './components/GeneralStatistic.js';
+import { GeneralStatistic } from './components/GeneralStatistic.js';
 
 const app = {
   initSideBar: function(){
@@ -16,7 +16,7 @@ const app = {
 
     thisApp.generalStatisticWrapper = document.querySelector(select.containerOf.generalStatistic);
 
-    new GeneralStatisitc(thisApp.generalStatisticWrapper);
+    new GeneralStatistic(thisApp.generalStatisticWrapper);
   },
 
   init: function() {

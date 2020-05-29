@@ -5,6 +5,12 @@ class GeneralStatistic {
     const thisGeneralStatistic = this;
 
     thisGeneralStatistic.getElement(element);
+    thisGeneralStatistic.initActions();
+  }
+
+  initActions() {
+    const thisGeneralStatistic = this;
+
     thisGeneralStatistic.inputCheckedActivTabButton();
   }
 

@@ -12,6 +12,17 @@ class GeneralStatistic {
     const thisGeneralStatistic = this;
 
     thisGeneralStatistic.inputCheckedActivTabButton();
+
+    /*START LOOP: for all tab buttons*/
+    for(let tab of thisGeneralStatistic.dom.colorTabButtons) {
+      /*[DONE] Event litener for tab buttons */
+      tab.addEventListener('click', function(){
+        thisGeneralStatistic.toggleActiveClassTabButtons(tab);
+        thisGeneralStatistic.inputCheckedActivTabButton();
+      });
+
+    /*END LOOP: for all tab buttons*/
+    }
   }
 
   inputCheckedActivTabButton() {
@@ -36,6 +47,11 @@ class GeneralStatistic {
       }
     /*END LOOP: for all  color tab buttons*/
     }
+  }
+
+  toggleActiveClassTabButtons(tab) {
+    /* Toggle active class */
+    tab.classList.toggle(classNames.generalStatisticSection.active);
   }
 
   getElement(element) {

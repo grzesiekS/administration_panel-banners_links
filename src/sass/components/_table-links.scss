@@ -47,3 +47,42 @@
     }
   }
 }
+
+@media (max-width: 639px) {
+  .table-links {
+    tr {
+      td {
+        &:first-child, &:nth-child(2), &:last-child {
+          text-align: center;
+          padding-left: 0;
+        }
+
+        &:last-child i {
+          margin-left: 0;
+        }
+
+        &:first-child h2 {
+          margin-left: 0;
+        }
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        i {
+          opacity: 1;
+        }
+      }
+
+      &:hover {
+        cursor: auto;
+      }
+
+      margin-top: 25px;
+    }
+  }
+
+  .table-links tbody tr {
+    border-bottom: 5px solid $color-dark;
+  }
+}

@@ -94,6 +94,19 @@
 }
 
 @media (max-width: 767px) {
+  .general-statistic__date {
+
+    .btn {
+      display: block;
+      width: 41px;
+      margin: 10px auto;
+    }
+  }
+
+  .date__input {
+    margin: 35px 0 0;
+  }
+
   .general-statistic__summary {
     .summary {
       &.margin--right {
@@ -111,6 +124,19 @@
       .color-tab {
         margin-right: 0;
         display: block;
+      }
+    }
+  }
+}
+
+@media (max-width: 369px) {
+  .date__input {
+    input {
+      position: relative;
+
+      &:focus::-webkit-calendar-picker-indicator {
+        position: absolute;
+        right: 5%;
       }
     }
   }

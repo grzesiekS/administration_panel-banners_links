@@ -92,3 +92,26 @@
     }
   }
 }
+
+@media (max-width: 767px) {
+  .general-statistic__summary {
+    .summary {
+      &.margin--right {
+        margin-right: 0;
+      }
+
+      &.margin--left {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .general-statistic__earnings-chart {
+    .tab-buttons {
+      .color-tab {
+        margin-right: 0;
+        display: block;
+      }
+    }
+  }
+}

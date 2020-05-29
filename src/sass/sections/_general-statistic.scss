@@ -74,14 +74,19 @@
   }
 
   .tab-buttons {
-    justify-content: space-around;
+    .color-tab {
+      margin-right: 50px;
+    }
+
+    .color-tab:last-child {
+      margin-right: 0;
+    }
   }
 
   .graph {
     margin: 40px 0;
 
     img {
-      object-fit: cover;
       width: 100%;
       height: 100%;
     }

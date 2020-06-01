@@ -1,4 +1,8 @@
 /* Top Bar section */
+.top-bar {
+  z-index: 100;
+}
+
 @media(max-width: 668px) {
   .top-bar {
     .top-bar__content {

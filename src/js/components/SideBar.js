@@ -29,6 +29,7 @@ class SideBar {
         event.preventDefault();
         thisSideBar.removeActiveLinks();
         thisSideBar.setActiveLink(link);
+        thisSideBar.setActiveClassForSection(link);
       });
     /*END LOOP: for all links in side bar*/
     }
@@ -65,6 +66,34 @@ class SideBar {
     }
   }
 
+  setActiveClassForSection(link){
+    const thisSideBar = this;
+
+    /*[DONE] get href attribute from link */
+    const hrefAtt = link.getAttribute('href');
+
+    /*[DONE] create array from href atribute*/
+    const hrefArray = hrefAtt.split('/');
+
+    /*START LOOP: For all href in hrefArray */
+    for(let href of hrefArray) {
+      console.log(href);
+      /*[DONE] get section that contains class from href attribute */
+      const selectedSection = thisSideBar.sections.querySelector('section[class*="' + href.replace('#','') + '"]');
+      console.log(selectedSection);
+
+      /*START IF: if selected Section is not null*/
+      if(selectedSection != null) {
+        /*[DONE] Add active class to selected section */
+        selectedSection.classList.add(classNames.sections.active);
+
+      /*END IF: if selected Section is not null*/
+      }
+
+    /*END LOOP: For all href in hrefArray */
+    }
+  }
+
   getElemenst(element) {
     const thisSideBar = this;
 
@@ -74,6 +103,9 @@ class SideBar {
     thisSideBar.dom.logo = thisSideBar.dom.wrapper.querySelector(select.sideBarSection.logo);
     thisSideBar.dom.logo.link = thisSideBar.dom.logo.querySelector('a');
     thisSideBar.dom.menu_links = thisSideBar.dom.wrapper.querySelectorAll(select.sideBarSection.menu_links);
+
+    thisSideBar.sections = document.querySelector(select.containerOf.sections);
+    console.log(thisSideBar.sections);
   }
 }
 

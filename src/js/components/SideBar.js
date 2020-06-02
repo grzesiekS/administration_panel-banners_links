@@ -27,6 +27,7 @@ class SideBar {
     for(let link of thisSideBar.dom.menu_links) {
       link.addEventListener('click', function(){
         event.preventDefault();
+        thisSideBar.removeActiveLinks();
         thisSideBar.setActiveLink(link);
       });
     /*END LOOP: for all links in side bar*/
@@ -53,6 +54,17 @@ class SideBar {
     link.classList.add(classNames.sideBarSection.active);
   }
 
+  removeActiveLinks() {
+    const thisSideBar = this;
+    /*START LOOP: for all links in side bar */
+    for(let link of thisSideBar.dom.menu_links) {
+      /*[DONE] remove active class from link */
+      link.classList.remove(classNames.sideBarSection.active);
+
+    /*END LOOP: for all links in side bar */
+    }
+  }
+
   getElemenst(element) {
     const thisSideBar = this;
 
@@ -62,7 +74,6 @@ class SideBar {
     thisSideBar.dom.logo = thisSideBar.dom.wrapper.querySelector(select.sideBarSection.logo);
     thisSideBar.dom.logo.link = thisSideBar.dom.logo.querySelector('a');
     thisSideBar.dom.menu_links = thisSideBar.dom.wrapper.querySelectorAll(select.sideBarSection.menu_links);
-    console.log(thisSideBar.dom.menu_links);
   }
 }
 

@@ -32,10 +32,8 @@
         opacity: 0;
       }
 
-      a:hover {
-        i {
-          color: $main-color;
-        }
+      a:hover i {
+        color: $main-color;
       }
     }
 

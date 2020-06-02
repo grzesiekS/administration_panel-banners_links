@@ -55,10 +55,15 @@ body, html {
 .sections {
   section {
     margin: 11px 18px;
+    display: none;
 
-    &:first-child {
-      margin-top: 78px;
+    &.active {
+      display: block;
     }
+  }
+
+  .margin-top {
+    margin-top: 78px;
   }
 }
 

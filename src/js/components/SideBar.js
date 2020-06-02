@@ -31,6 +31,7 @@ class SideBar {
         thisSideBar.setActiveLink(link);
         thisSideBar.removeActiveClassFromSections();
         thisSideBar.setActiveClassForSection(link);
+        thisSideBar.addMarginTopClass();
       });
     /*END LOOP: for all links in side bar*/
     }
@@ -109,6 +110,16 @@ class SideBar {
 
     /*END LOOP: For all active sections */
     }
+  }
+
+  addMarginTopClass() {
+    const thisSideBar = this;
+
+    /*[DONE] get all active sections */
+    const activeSections = thisSideBar.sections.querySelectorAll('section[class*="' + classNames.sections.active + '"]');
+
+    /*Add margin-top class to first section */
+    activeSections[0].classList.add(classNames.sections.margin_top);
   }
 
   getElemenst(element) {

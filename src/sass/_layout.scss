@@ -55,10 +55,14 @@ body, html {
 .sections {
   section {
     margin: 11px 18px;
-    display: none;
+    position: absolute;
+    top: -100%;
+    opacity: 0;
+    transition: opacity 1s;
 
     &.active {
-      display: block;
+      position: static;
+      opacity: 1;
     }
   }
 

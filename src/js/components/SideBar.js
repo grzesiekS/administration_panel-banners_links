@@ -91,15 +91,16 @@ class SideBar {
 
     /*END LOOP: For all href in hrefArray */
     }
-
-    thisSideBar.addMarginTopClass();
   }
 
   removeActiveClassFromSections() {
     const thisSideBar = this;
 
+    /*[DONE] get all active sections */
+    const activeSections = thisSideBar.sections.querySelectorAll('section[class*="' + classNames.sections.active + '"]');
+
     /*START LOOP: For all active sections */
-    for(let section of thisSideBar.sections.active) {
+    for(let section of activeSections) {
       /* [DONE] remove active class */
       section.classList.remove(classNames.sections.active);
 
@@ -108,13 +109,6 @@ class SideBar {
 
     /*END LOOP: For all active sections */
     }
-  }
-
-  addMarginTopClass() {
-    const thisSideBar = this;
-
-    /*Add margin-top class */
-    thisSideBar.sections.active[0].classList.add(classNames.sections.margin_top);
   }
 
   getElemenst(element) {
@@ -128,7 +122,7 @@ class SideBar {
     thisSideBar.dom.menu_links = thisSideBar.dom.wrapper.querySelectorAll(select.sideBarSection.menu_links);
 
     thisSideBar.sections = document.querySelector(select.containerOf.sections);
-    thisSideBar.sections.active = thisSideBar.sections.querySelectorAll('section[class*="' + classNames.sections.active + '"]');
+    console.log(thisSideBar.sections);
   }
 }
 

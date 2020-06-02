@@ -7,6 +7,7 @@ const select = {
   sideBarSection: {
     logo: '.side-bar .logo',
     menu: '.side-bar__menu',
+    menu_links: '.side-bar__menu li a',
     messenger: '.side-bar__messenger',
     bottomMenu: '.side-bar__menu--bottom',
   },

@@ -96,11 +96,8 @@ class SideBar {
   removeActiveClassFromSections() {
     const thisSideBar = this;
 
-    /*[DONE] get all active sections */
-    const activeSections = thisSideBar.sections.querySelectorAll('section[class*="' + classNames.sections.active + '"]');
-
     /*START LOOP: For all active sections */
-    for(let section of activeSections) {
+    for(let section of thisSideBar.sections.active) {
       /* [DONE] remove active class */
       section.classList.remove(classNames.sections.active);
 
@@ -122,6 +119,7 @@ class SideBar {
     thisSideBar.dom.menu_links = thisSideBar.dom.wrapper.querySelectorAll(select.sideBarSection.menu_links);
 
     thisSideBar.sections = document.querySelector(select.containerOf.sections);
+    thisSideBar.sections.active = thisSideBar.sections.querySelectorAll('section[class*="' + classNames.sections.active + '"]');
     console.log(thisSideBar.sections);
   }
 }

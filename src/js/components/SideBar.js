@@ -31,7 +31,6 @@ class SideBar {
         thisSideBar.setActiveLink(link);
         thisSideBar.removeActiveClassFromSections();
         thisSideBar.setActiveClassForSection(link);
-        thisSideBar.addMarginTopClass();
       });
     /*END LOOP: for all links in side bar*/
     }
@@ -87,6 +86,8 @@ class SideBar {
         /*[DONE] Add active class to selected section */
         selectedSection.classList.add(classNames.sections.active);
 
+        thisSideBar.addMarginTopClass();
+
       /*END IF: if selected Section is not null*/
       }
 
@@ -133,7 +134,6 @@ class SideBar {
     thisSideBar.dom.menu_links = thisSideBar.dom.wrapper.querySelectorAll(select.sideBarSection.menu_links);
 
     thisSideBar.sections = document.querySelector(select.containerOf.sections);
-    console.log(thisSideBar.sections);
   }
 }
 

@@ -1,5 +1,6 @@
 const select = {
   containerOf: {
+    sections: '.sections',
     topBar: '.top-bar',
     sideBar: '.side-bar',
     generalStatistic: '.general-statistic',
@@ -26,6 +27,10 @@ const classNames = {
   },
   generalStatisticSection: {
     active: 'active',
+  },
+  sections: {
+    active: 'active',
+    margin_top: 'margin-top',
   },
 };
 

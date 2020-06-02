@@ -91,6 +91,8 @@ class SideBar {
 
     /*END LOOP: For all href in hrefArray */
     }
+
+    thisSideBar.addMarginTopClass();
   }
 
   removeActiveClassFromSections() {
@@ -108,6 +110,13 @@ class SideBar {
     }
   }
 
+  addMarginTopClass() {
+    const thisSideBar = this;
+
+    /*Add margin-top class */
+    thisSideBar.sections.active[0].classList.add(classNames.sections.margin_top);
+  }
+
   getElemenst(element) {
     const thisSideBar = this;
 
@@ -120,7 +129,6 @@ class SideBar {
 
     thisSideBar.sections = document.querySelector(select.containerOf.sections);
     thisSideBar.sections.active = thisSideBar.sections.querySelectorAll('section[class*="' + classNames.sections.active + '"]');
-    console.log(thisSideBar.sections);
   }
 }
 

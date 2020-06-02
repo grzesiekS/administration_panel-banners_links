@@ -29,6 +29,7 @@ class SideBar {
         event.preventDefault();
         thisSideBar.removeActiveLinks();
         thisSideBar.setActiveLink(link);
+        thisSideBar.removeActiveClassFromSections();
         thisSideBar.setActiveClassForSection(link);
       });
     /*END LOOP: for all links in side bar*/
@@ -77,10 +78,8 @@ class SideBar {
 
     /*START LOOP: For all href in hrefArray */
     for(let href of hrefArray) {
-      console.log(href);
       /*[DONE] get section that contains class from href attribute */
       const selectedSection = thisSideBar.sections.querySelector('section[class*="' + href.replace('#','') + '"]');
-      console.log(selectedSection);
 
       /*START IF: if selected Section is not null*/
       if(selectedSection != null) {
@@ -91,6 +90,24 @@ class SideBar {
       }
 
     /*END LOOP: For all href in hrefArray */
+    }
+  }
+
+  removeActiveClassFromSections() {
+    const thisSideBar = this;
+
+    /*[DONE] get all active sections */
+    const activeSections = thisSideBar.sections.querySelectorAll('section[class*="' + classNames.sections.active + '"]');
+
+    /*START LOOP: For all active sections */
+    for(let section of activeSections) {
+      /* [DONE] remove active class */
+      section.classList.remove(classNames.sections.active);
+
+      /* [DONE] remove margin-top class */
+      section.classList.remove(classNames.sections.margin_top);
+
+    /*END LOOP: For all active sections */
     }
   }
 

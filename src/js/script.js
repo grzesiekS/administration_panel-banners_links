@@ -32,4 +32,4 @@ function openModal(modal) {
   document.querySelector(modal).classList.add('show');
 }
 
-openModal('#myModal');
+openModal('#modal__login');

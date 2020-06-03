@@ -12,12 +12,28 @@ class Modals {
   initActions() {
     const thisModal = this;
 
+    thisModal.closeModalBacground();
+
     thisModal.topMenuLinks.forEach(element => {
       element.addEventListener('click', function(){
         event.preventDefault();
 
       });
     });
+  }
+
+  closeModalBackground() {
+    const thisModal = this;
+    document.querySelector('#' + select.containerOf.modals).addEventListener('click', function(e) {
+      if(e.target === this) {
+        thisModal.closeModal();
+      }
+    });
+  }
+
+  closeModal() {
+    const thisModal = this;
+    thisModal.dom.wrapper.classList.remove('show');
   }
 
   getElements(element) {

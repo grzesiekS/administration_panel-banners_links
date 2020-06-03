@@ -21,7 +21,7 @@ const select = {
     colorTabButtons: '.color-tab',
   },
   modalSections: {
-    modalLogin: 'modal__login',
+    modalLogin: '#modal__login',
   },
   topMenuComponent: {
     topMenu: '.top-menu',

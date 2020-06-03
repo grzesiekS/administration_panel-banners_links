@@ -23,7 +23,7 @@
     margin-left: 0;
   }
 
-  form {
+  .container--flex {
     margin: 40px  auto;
   }
 
@@ -65,7 +65,7 @@
 @media(max-width: 767px) {
   #modal__login {
     input {
-      padding: 10px 30px
+      padding: 10px 30px;
     }
 
     .login__input, .password__input {

@@ -23,6 +23,10 @@ const select = {
   modalSections: {
     modalLogin: 'modal__login',
   },
+  topMenuComponent: {
+    topMenu: '.top-menu',
+    topMenuLinks: '.top-menu a',
+  },
 };
 
 const classNames = {

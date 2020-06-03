@@ -61,3 +61,16 @@
     }
   }
 }
+
+@media(max-width: 767px) {
+  #modal__login {
+    input {
+      padding: 10px 30px
+    }
+
+    .login__input, .password__input {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+}

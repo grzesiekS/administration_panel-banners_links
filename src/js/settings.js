@@ -4,6 +4,7 @@ const select = {
     topBar: '.top-bar',
     sideBar: '.side-bar',
     generalStatistic: '.general-statistic',
+    modals: '#overlay',
   },
   sideBarSection: {
     logo: '.side-bar .logo',
@@ -19,6 +20,9 @@ const select = {
     tabButtons: '.tab-buttons',
     colorTabButtons: '.color-tab',
   },
+  modalSections: {
+    modalLogin: '#modal__login',
+  },
 };
 
 const classNames = {
@@ -31,6 +35,9 @@ const classNames = {
   sections: {
     active: 'active',
     margin_top: 'margin-top',
+  },
+  modals: {
+    show: 'show',
   },
 };
 

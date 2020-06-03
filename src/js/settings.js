@@ -4,7 +4,7 @@ const select = {
     topBar: '.top-bar',
     sideBar: '.side-bar',
     generalStatistic: '.general-statistic',
-    modals: '#overlay',
+    modals: 'overlay',
   },
   sideBarSection: {
     logo: '.side-bar .logo',
@@ -21,7 +21,7 @@ const select = {
     colorTabButtons: '.color-tab',
   },
   modalSections: {
-    modalLogin: '#modal__login',
+    modalLogin: 'modal__login',
   },
 };
 

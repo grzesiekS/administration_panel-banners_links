@@ -1,4 +1,4 @@
-import { classNames } from '../settings.js';
+import { classNames, select } from '../settings.js';
 
 class Modals {
   constructor(elementWrapper){
@@ -6,7 +6,6 @@ class Modals {
 
     thisModal.dom = {};
     thisModal.dom.wrapper = elementWrapper;
-
   }
 
   // initActions() {
@@ -26,8 +25,6 @@ class Modals {
   }
 
   openModal(modal) {
-    const thisModal = this;
-
     document.querySelectorAll('#overlay > *').forEach(function(modal) {
       modal.classList.remove(classNames.modals.show);
     });
@@ -36,7 +33,7 @@ class Modals {
     modal.classList.add(classNames.modals.show);
 
     /*[DONE] Add show class for overlay class */
-    thisModal.dom.wrapper.classList.add(classNames.modals.show);
+    document.getElementById(select.containerOf.modals).classList.add(classNames.modals.show);
 
     /*END IF: If selected modal is not null */
   }

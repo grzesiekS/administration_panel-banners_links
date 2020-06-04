@@ -1,4 +1,5 @@
 import { select } from '../settings.js';
+import { ModalExit } from './ModalExit.js';
 
 class TopMenu {
   constructor() {
@@ -13,7 +14,7 @@ class TopMenu {
 
     thisTopMenu.links.forEach(element => {
       element.addEventListener('click', function(){
-        thisTopMenu.findModal(element);
+        thisTopMenu.openSelectedModal(thisTopMenu.findModal(element));
       });
     });
   }
@@ -27,6 +28,15 @@ class TopMenu {
     const modal = document.getElementById('modal__' + href.replace('#',''));
 
     return modal;
+  }
+
+  openSelectedModal(modal) {
+
+    /*START IF: Modal is not null */
+    if(modal != null){
+      /* init class ModalExit */
+      new ModalExit(modal);
+    }
   }
 
   getElements() {

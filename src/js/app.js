@@ -1,7 +1,6 @@
 import { select } from './settings.js';
 import { SideBar } from './components/SideBar.js';
 import { GeneralStatistic } from './components/GeneralStatistic.js';
-import { Modals } from './components/Modals.js';
 import { ModalLogin } from './components/ModalLogin.js';
 import { TopMenu } from './components/TopMenu.js';
 
@@ -22,13 +21,12 @@ const app = {
     new GeneralStatistic(thisApp.generalStatisticWrapper);
   },
 
-  initModals: function() {
+  initModalLogin: function() {
     const thisApp = this;
 
     thisApp.modalWrapper = document.getElementById(select.containerOf.modals);
-
-    new Modals(thisApp.modalWrapper);
     new ModalLogin(thisApp.modalWrapper);
+
   },
 
   initTopMenu: function() {
@@ -42,7 +40,7 @@ const app = {
 
     thisApp.initSideBar();
     thisApp.initGeneralStatistic();
-    thisApp.initModals();
+    thisApp.initModalLogin();
     thisApp.initTopMenu();
   },
 };

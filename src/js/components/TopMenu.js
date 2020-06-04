@@ -14,6 +14,7 @@ class TopMenu {
 
     thisTopMenu.links.forEach(element => {
       element.addEventListener('click', function(){
+        event.preventDefault();
         thisTopMenu.openSelectedModal(thisTopMenu.findModal(element));
       });
     });

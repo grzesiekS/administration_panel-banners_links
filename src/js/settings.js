@@ -5,6 +5,7 @@ const select = {
     sideBar: '.side-bar',
     generalStatistic: '.general-statistic',
     modals: 'overlay',
+    topMenu: '.top-menu',
   },
   sideBarSection: {
     logo: '.side-bar .logo',
@@ -27,7 +28,6 @@ const select = {
     modalLogin_password: '#password',
   },
   topMenuComponent: {
-    topMenu: '.top-menu',
     topMenuLinks: '.top-menu a',
   },
 };

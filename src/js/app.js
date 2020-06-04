@@ -3,6 +3,7 @@ import { SideBar } from './components/SideBar.js';
 import { GeneralStatistic } from './components/GeneralStatistic.js';
 import { Modals } from './components/Modals.js';
 import { ModalLogin } from './components/ModalLogin.js';
+import { TopMenu } from './components/TopMenu.js';
 
 const app = {
   initSideBar: function(){
@@ -28,6 +29,15 @@ const app = {
 
     new Modals(thisApp.modalWrapper);
     new ModalLogin(thisApp.modalWrapper);
+  },
+
+  initTopMenu: function() {
+    const thisApp = this;
+
+    thisApp.topMenuWrapper = document.querySelectorAll(select.containerOf.topMenu);
+
+    new TopMenu(thisApp.topMenuWrapper);
+
   },
 
   init: function() {

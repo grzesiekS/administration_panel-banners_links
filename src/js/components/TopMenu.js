@@ -13,9 +13,20 @@ class TopMenu {
 
     thisTopMenu.links.forEach(element => {
       element.addEventListener('click', function(){
-        console.log(element);
+        thisTopMenu.findModal(element);
       });
     });
+  }
+
+  findModal(element){
+
+    /*[DONE] Get href attribute from element */
+    const href = element.getAttribute('href');
+
+    /*[DONE] Find modal that contain in id href atribute */
+    const modal = document.getElementById('modal__' + href.replace('#',''));
+
+    return modal;
   }
 
   getElements() {

@@ -2,6 +2,7 @@ import { select } from './settings.js';
 import { SideBar } from './components/SideBar.js';
 import { GeneralStatistic } from './components/GeneralStatistic.js';
 import { Modals } from './components/Modals.js';
+import { ModalLogin } from './components/ModalLogin.js';
 
 const app = {
   initSideBar: function(){
@@ -26,6 +27,7 @@ const app = {
     thisApp.modalWrapper = document.getElementById(select.containerOf.modals);
 
     new Modals(thisApp.modalWrapper);
+    new ModalLogin(thisApp.modalWrapper);
   },
 
   init: function() {

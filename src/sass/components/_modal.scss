@@ -72,6 +72,22 @@
   }
 }
 
+#modal__exit {
+  .modal__exit--buttons {
+    text-align: right;
+    margin-top: 35px;
+
+    .js--close-modal {
+      padding: 7px 0;
+      width: 75px;
+    }
+
+    .js--close-modal:first-child {
+      margin: 0 15px 0 110px;
+    }
+  }
+}
+
 @media(max-width: 767px) {
   #modal__login {
     input {
@@ -81,6 +97,14 @@
     .login__input, .password__input {
       margin-right: 0;
       margin-bottom: 20px;
+    }
+  }
+
+  #modal__exit {
+    .modal__exit--buttons {
+      .js--close-modal:first-child {
+        margin-left: auto;
+      }
     }
   }
 }

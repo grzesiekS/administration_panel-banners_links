@@ -1,5 +1,5 @@
 import { Modals } from './Modals.js';
-import {select} from '../settings.js';
+import {select, classNames} from '../settings.js';
 
 class ModalLogin extends Modals {
   constructor(element){
@@ -15,6 +15,10 @@ class ModalLogin extends Modals {
 
     thisModal.dom.submitButton.addEventListener('click', function(){
       event.preventDefault();
+
+      thisModal.validLogin();
+      thisModal.validPassword();
+
       /*START IF: If login and password are valid */
       if(thisModal.validLogin() && thisModal.validPassword) {
         thisModal.closeModal(thisModal.dom.login);
@@ -30,6 +34,7 @@ class ModalLogin extends Modals {
     if(thisModal.dom.inputLogin.value.length > 0) {
       return true;
     } else {
+      thisModal.dom.inputLogin.classList.add(classNames.errors.inputError);
       return false;
     }
   }
@@ -41,6 +46,7 @@ class ModalLogin extends Modals {
     if(thisModal.dom.inputPassword.value.length > 0) {
       return true;
     } else {
+      thisModal.dom.inputPassword.classList.add(classNames.errors.inputError);
       return false;
     }
   }

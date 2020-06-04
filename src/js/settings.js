@@ -46,6 +46,9 @@ const classNames = {
   modals: {
     show: 'show',
   },
+  errors: {
+    inputError: 'input--error',
+  }
 };
 
 const options = {

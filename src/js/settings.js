@@ -23,8 +23,8 @@ const select = {
   modalSections: {
     modalLogin: '#modal__login',
     modalLogin_submit: '#modal__login .js--close-modal',
-    modalLogin_login: 'login',
-    modalLogin_password: 'password',
+    modalLogin_login: '#login',
+    modalLogin_password: '#password',
   },
   topMenuComponent: {
     topMenu: '.top-menu',

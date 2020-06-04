@@ -46,6 +46,7 @@ const app = {
     thisApp.initSideBar();
     thisApp.initGeneralStatistic();
     thisApp.initModals();
+    thisApp.initTopMenu();
   },
 };
 

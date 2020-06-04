@@ -1,15 +1,17 @@
+import { select } from '../settings.js';
+
 class TopMenu {
-  constructor(element) {
+  constructor() {
     const thisTopMenu = this;
 
-    thisTopMenu.getElements(element);
+    thisTopMenu.getElements();
   }
 
-  getElements(element) {
+  getElements() {
     const thisTopMenu = this;
 
-    thisTopMenu.dom = {};
-    thisTopMenu.dom.wrapper = element;
+    thisTopMenu.links = document.querySelectorAll(select.topMenuComponent.topMenuLinks);
+    console.log(thisTopMenu.links);
   }
 }
 

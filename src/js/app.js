@@ -32,11 +32,8 @@ const app = {
   },
 
   initTopMenu: function() {
-    const thisApp = this;
 
-    thisApp.topMenuWrapper = document.querySelectorAll(select.containerOf.topMenu);
-
-    new TopMenu(thisApp.topMenuWrapper);
+    new TopMenu();
 
   },
 

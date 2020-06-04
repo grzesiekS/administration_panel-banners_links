@@ -32,19 +32,13 @@ class Modals {
       modal.classList.remove(classNames.modals.show);
     });
 
-    /*[DONE] Get selected modal */
-    const selectedModal = document.querySelector(modal);
+    /*[DONE] Add show class to selected modal */
+    modal.classList.add(classNames.modals.show);
 
-    /*START IF: If selected modal is not null */
-    if(selectedModal != null) {
-      /*[DONE] Add show class to selected modal */
-      selectedModal.classList.add(classNames.modals.show);
-
-      /*[DONE] Add show class for overlay class */
-      thisModal.dom.wrapper.classList.add(classNames.modals.show);
+    /*[DONE] Add show class for overlay class */
+    thisModal.dom.wrapper.classList.add(classNames.modals.show);
 
     /*END IF: If selected modal is not null */
-    }
   }
 }
 

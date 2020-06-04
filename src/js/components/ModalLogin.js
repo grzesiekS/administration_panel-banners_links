@@ -8,6 +8,7 @@ class ModalLogin extends Modals {
     const thisModal = this;
     thisModal.getElements();
     thisModal.initActions();
+    thisModal.openModal(thisModal.dom.login);
   }
 
   initActions() {

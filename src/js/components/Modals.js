@@ -1,31 +1,24 @@
-import { select, classNames } from '../settings.js';
+import { classNames } from '../settings.js';
 
 class Modals {
-  constructor(element){
+  constructor(elementWrapper){
     const thisModal = this;
 
-    thisModal.getElements(element);
-    thisModal.initActions();
+    thisModal.dom = {};
+    thisModal.dom.wrapper = elementWrapper;
 
   }
 
-  initActions() {
-    const thisModal = this;
+  // initActions() {
+  //   const thisModal = this;
 
-    /* Close modal by clicking background of overlay */
-    document.querySelector('#' + select.containerOf.modals).addEventListener('click', function(e) {
-      if(e.target === this) {
-        thisModal.closeModal();
-      }
-    });
-
-    thisModal.topMenuLinks.forEach(element => {
-      element.addEventListener('click', function(){
-        event.preventDefault();
-        thisModal.openModal('#modal__' + element.getAttribute('href').replace('#',''));
-      });
-    });
-  }
+  //   thisModal.topMenuLinks.forEach(element => {
+  //     element.addEventListener('click', function(){
+  //       event.preventDefault();
+  //       thisModal.openModal('#modal__' + element.getAttribute('href').replace('#',''));
+  //     });
+  //   });
+  // }
 
   closeModal() {
     const thisModal = this;
@@ -52,16 +45,6 @@ class Modals {
 
     /*END IF: If selected modal is not null */
     }
-  }
-
-  getElements(element) {
-    const thisModal = this;
-
-    thisModal.dom = {};
-    thisModal.dom.wrapper = element;
-
-    thisModal.dom.login = thisModal.dom.wrapper.querySelector(select.modalSections.modalLogin);
-    thisModal.topMenuLinks = document.querySelectorAll(select.topMenuComponent.topMenuLinks);
   }
 }
 

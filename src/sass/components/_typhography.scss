@@ -53,3 +53,9 @@ i {
     font-size: 11px;
   }
 }
+
+.input--error {
+  background-color: $color-error;
+  border: none;
+  border-radius: $border-redius;
+}

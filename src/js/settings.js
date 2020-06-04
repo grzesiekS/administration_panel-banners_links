@@ -22,6 +22,7 @@ const select = {
   },
   modalSections: {
     modalLogin: '#modal__login',
+    modalLogin_submit: '#modal__login js--close-modal',
   },
   topMenuComponent: {
     topMenu: '.top-menu',

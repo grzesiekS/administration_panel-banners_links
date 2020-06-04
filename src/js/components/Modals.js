@@ -8,20 +8,8 @@ class Modals {
     thisModal.dom.wrapper = elementWrapper;
   }
 
-  // initActions() {
-  //   const thisModal = this;
-
-  //   thisModal.topMenuLinks.forEach(element => {
-  //     element.addEventListener('click', function(){
-  //       event.preventDefault();
-  //       thisModal.openModal('#modal__' + element.getAttribute('href').replace('#',''));
-  //     });
-  //   });
-  // }
-
   closeModal() {
-    const thisModal = this;
-    thisModal.dom.wrapper.classList.remove(classNames.modals.show);
+    document.getElementById(select.containerOf.modals).classList.remove(classNames.modals.show);
   }
 
   openModal(modal) {

@@ -7,6 +7,20 @@ class ModalLogin extends Modals {
 
     const thisModal = this;
     thisModal.getElements();
+    thisModal.initActions();
+  }
+
+  initActions() {
+    const thisModal = this;
+
+    thisModal.dom.submitButton.addEventListener('click', function(){
+      event.preventDefault();
+      /*START IF: If login and password are valid */
+      if(thisModal.validLogin() && thisModal.validPassword) {
+        thisModal.closeModal(thisModal.dom.login);
+      }
+
+    });
   }
 
   validLogin(){
@@ -37,8 +51,7 @@ class ModalLogin extends Modals {
     thisModal.dom.login = thisModal.dom.wrapper.querySelector(select.modalSections.modalLogin);
     thisModal.dom.inputLogin = thisModal.dom.wrapper.querySelector(select.modalSections.modalLogin_login);
     thisModal.dom.inputPassword = thisModal.dom.wrapper.querySelector(select.modalSections.modalLogin_password);
-    console.log(thisModal.dom.inputLogin);
-    console.log(thisModal.dom.inputPassword);
+    thisModal.dom.submitButton = thisModal.dom.wrapper.querySelector(select.modalSections.modalLogin_submit);
   }
 }
 

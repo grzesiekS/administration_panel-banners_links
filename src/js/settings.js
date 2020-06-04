@@ -26,6 +26,7 @@ const select = {
     modalLogin_submit: '#modal__login .js--close-modal',
     modalLogin_login: '#login',
     modalLogin_password: '#password',
+    modalCloseButton: '.js--close-modal',
   },
   topMenuComponent: {
     topMenuLinks: '.top-menu a',

@@ -69,4 +69,9 @@ const chart = new Chart(ctx, {
       hidden: true,
     }]
   },
+  options: {
+    legend: {
+      display: false,
+    },
+  },
 });

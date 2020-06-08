@@ -3,6 +3,7 @@ import { SideBar } from './components/SideBar.js';
 import { GeneralStatistic } from './components/GeneralStatistic.js';
 import { ModalLogin } from './components/ModalLogin.js';
 import { TopMenu } from './components/TopMenu.js';
+import { MyChart } from './components/MyChart.js';
 
 const app = {
   initSideBar: function(){
@@ -35,6 +36,10 @@ const app = {
 
   },
 
+  initChart: function() {
+    new MyChart();
+  },
+
   init: function() {
     const thisApp = this;
 
@@ -42,6 +47,7 @@ const app = {
     thisApp.initGeneralStatistic();
     thisApp.initModalLogin();
     thisApp.initTopMenu();
+    thisApp.initChart();
   },
 };
 

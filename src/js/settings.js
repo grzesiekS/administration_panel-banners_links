@@ -31,6 +31,9 @@ const select = {
   topMenuComponent: {
     topMenuLinks: '.top-menu a',
   },
+  chartComponent: {
+    myChart: 'myChart',
+  },
 };
 
 const classNames = {

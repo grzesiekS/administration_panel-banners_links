@@ -4,12 +4,6 @@ class MyChart {
   constructor() {
     const thisMyChart = this;
 
-    thisMyChart.chartOptions = {
-      signups: false,
-      ftd: false,
-      earned: true,
-    };
-
     thisMyChart.getElements();
     thisMyChart.renderChart();
     thisMyChart.initActions();

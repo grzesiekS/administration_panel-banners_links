@@ -1,2 +1,2 @@
 GitHub Pages website:
-https://grzesieks.github.io/AdministrationPanelWebsite/
+https://grzesieks.github.io/AdministrationPanel-Website/

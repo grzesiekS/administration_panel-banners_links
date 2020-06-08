@@ -21,19 +21,44 @@ class MyChart {
     thisMyChart.colorTab.forEach(element => {
       element.addEventListener('click', function(){
         thisMyChart.input.forEach(inputElement => {
-          if(inputElement.checked) {
-            thisMyChart.chartOptions[inputElement.value] = false;
-          } else {
-            thisMyChart.chartOptions[inputElement.value] = true;
-          }
+          thisMyChart.changeChartOptionVisible(inputElement);
         });
-        thisMyChart.chart.destroy();
-        thisMyChart.renderChart();
       });
     });
   }
 
+  changeChartOptionVisible(inputElement) {
+    const thisMyChart = this;
+    if(inputElement.checked) {
+      /* START LOOP: For all data of datasets in chart*/
+      for(let data of thisMyChart.chart.data.datasets) {
+        /*START IF: If id is equal checked input element */
+        if(data.id == inputElement.value) {
+          /*[DONE] change visibility to false */
+          data.hidden = false;
+          /*[DONE] Update chart */
+          thisMyChart.chart.update();
+        /*END IF: If id is equal checked input element */
+        }
+      /* END LOOP: For all data of datasets in chart*/
+      }
+    } else {
+      for(let data of thisMyChart.chart.data.datasets) {
+        /*START IF: If id is equal checked input element */
+        if(data.id == inputElement.value) {
+          /*[DONE] change visibility to true */
+          data.hidden = true;
+          /*[DONE] Update chart */
+          thisMyChart.chart.update();
+        /*END IF: If id is equal checked input element */
+        }
+      /* END LOOP: For all data of datasets in chart*/
+      }
+    }
+  }
+
   renderChart() {
+    /* Chart */
     const thisMyChart = this;
     const ctx = thisMyChart.myChart.getContext('2d');
     /*eslint-disable */
@@ -46,28 +71,31 @@ class MyChart {
         // 3
         datasets: [{
           // 4
+          id: 'signups',
           label: 'Signups',
           // 5
           backgroundColor: '#8DBEC8',
           borderColor: '#8DBEC8',
           // 6
           data: [ 52, 51, 41, 94, 26, 6, 72, 9, 21, 88 ],
-          hidden: thisMyChart.chartOptions.signups,
+          hidden: false,
         },
         {
+          id: 'ftd',
           label: 'FTD',
           backgroundColor: '#F29E4E',
           borderColor: '#F29E4E',
           data: [ 6, 72, 1, 0, 47, 11, 50, 44, 63, 76 ],
-          hidden: thisMyChart.chartOptions.ftd,
+          hidden: false,
         },
         {
+          id: 'earned',
           label: 'Earned',
           backgroundColor: '#71B374',
           borderColor: '#71B374',
           data: [ 59, 49, 68, 90, 67, 41, 13, 38, 48, 48 ],
           // 7
-          hidden: thisMyChart.chartOptions.earned,
+          hidden: true,
         }]
       },
       options: {

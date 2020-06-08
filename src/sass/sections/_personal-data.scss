@@ -30,13 +30,9 @@
     }
   }
 
-  .submit--button {
-    justify-content: center;
-    margin: 30px 0;
-
-    div[class*='col'] {
-      text-align: center; 
-    }
+  button {
+    display: block;
+    margin: 30px auto 19px;
   }
 }
 
@@ -44,6 +40,10 @@
   .personal-data {
     input {
       width: 80%;
+    }
+
+    h2 {
+      margin-bottom: 0;
     }
   }
 }

@@ -14,6 +14,7 @@
   &:hover {
     background: lighten($btn-bg, 3%);
     color: $btn-text;
+    cursor: pointer;
   }
 }
 

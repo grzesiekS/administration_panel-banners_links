@@ -7,6 +7,17 @@ class MyChart {
 
     thisMyChart.getElements();
     thisMyChart.renderChart();
+    thisMyChart.initActions();
+  }
+
+  initActions() {
+    const thisMyChart = this;
+
+    thisMyChart.inputs.forEach(element => {
+      element.addEventListener('click', function(){
+        console.log(element.querySelector(select.chartComponent.input));
+      });
+    });
   }
 
   renderChart() {
@@ -55,8 +66,7 @@ class MyChart {
     const thisMyChart = this;
 
     thisMyChart.myChart = document.getElementById(select.chartComponent.myChart);
-    thisMyChart.inputs = document.querySelectorAll(select.chartComponent.colorTabInput);
-    console.log(thisMyChart.inputs);
+    thisMyChart.inputs = document.querySelectorAll(select.chartComponent.colorTab);
   }
 }
 

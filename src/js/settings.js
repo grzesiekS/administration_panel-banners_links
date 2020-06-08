@@ -33,6 +33,7 @@ const select = {
   },
   chartComponent: {
     myChart: 'myChart',
+    colorTabInput: '.general-statistic__earnings-chart .color-tab input'
   },
 };
 

@@ -62,7 +62,7 @@ body, html {
     transition: opacity 1s;
 
     &.active {
-      position: static;
+      position: sticky;
       opacity: 1;
       z-index: 1;
     }

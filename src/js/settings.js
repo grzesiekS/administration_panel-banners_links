@@ -34,6 +34,7 @@ const select = {
   chartComponent: {
     myChart: 'myChart',
     colorTab: '.general-statistic__earnings-chart .color-tab',
+    colorTabInput: '.general-statistic__earnings-chart .color-tab input',
     input: 'input',
   },
 };
@@ -54,7 +55,10 @@ const classNames = {
   },
   errors: {
     inputError: 'input--error',
-  }
+  },
+  chartInputs: {
+
+  },
 };
 
 const options = {
